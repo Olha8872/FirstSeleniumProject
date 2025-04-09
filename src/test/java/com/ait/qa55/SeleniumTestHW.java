@@ -84,7 +84,39 @@ driver.navigate().back();
 
         driver.findElement(By.cssSelector("a[href$='/search']"));
         System.out.println(driver.findElement(By.cssSelector("a[href$='/search']")).getText());
+    }
+
+        @Test
+        public void findElementByXpath() {
+            // By tags
+            driver.findElement(By.xpath("//input"));
+
+            // by id
+            driver.findElement(By.xpath("//input[@id='small-searchterms']"));
+
+            // by class
+            driver.findElement(By.xpath("//div[@class='header-menu']"));
+
+            // by long text
+            driver.findElement(By.xpath("//a[text()='Register']"));
+
+            // by part text
+            driver.findElement(By.xpath("//a[contains(text(),'Reg')]"));
+
+            // by starts-with
+            driver.findElement(By.xpath("//a[starts-with(@href, '/reg')]"));
+
+            // move up
+            driver.findElement(By.xpath("//a[@href='/register']/.."));
+            // parent
+            driver.findElement(By.xpath("//a[@href='/register']/parent::li"));
+            // ancestor
+            driver.findElement(By.xpath("//a[@href='/register']/ancestor::div"));
+
+            // following-sibling
+            driver.findElement(By.xpath("//h2/following-sibling::div"));
+
+        }
 
     }
 
-}
