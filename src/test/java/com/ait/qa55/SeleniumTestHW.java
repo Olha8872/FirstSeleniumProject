@@ -116,6 +116,31 @@ driver.navigate().back();
             // following-sibling
             driver.findElement(By.xpath("//h2/following-sibling::div"));
 
+
+            //by id
+            driver.findElement(By.xpath("//*[@id='dialog-notifications-success']"));
+            // by class
+            driver.findElement(By.xpath("//div[@class='footer-menu-wrapper']"));
+            //by parent
+            driver.findElement(By.xpath("//h3/parent::div"));
+
+            //by ancestor
+            driver.findElement(By.xpath("//h3/ancestor::div"));
+            driver.findElement(By.xpath("//h2/ancestor::body"));
+            driver.findElement(By.xpath("//a[@href='/register']/ancestor::div"));
+            driver.findElement(By.xpath("//a[@href='/register']/ancestor::div[1]"));
+
+            //by following-sibling
+            driver.findElement(By.xpath("//div/following-sibling::*"));
+            driver.findElement(By.xpath("//h2/following-sibling::*"));
+            //by preceding-sibling
+            driver.findElement(By.xpath("//span/preceding-sibling::*"));
+
+
+
+
+
+
         }
 
     }

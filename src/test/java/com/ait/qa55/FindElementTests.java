@@ -135,6 +135,11 @@ public class FindElementTests {
         driver.findElement(By.xpath("//h1/following-sibling::form"));
 
 
+//folowing -  sibling предшествущий
+
+        driver.findElement(By.xpath("//h1/following-sibling::*"));
+        ////preceding -  sibling найдем h1 (вышестоящие все)
+        driver.findElement(By.xpath("//h2/preceding-sibling::*"));
 
 
     }
